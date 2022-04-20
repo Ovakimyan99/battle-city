@@ -8,5 +8,18 @@
 </head>
 <body>
   <script src="./engine/Loader.js"></script>
+  <script>
+    const { Loader } = GameEngine
+
+    const loader = new Loader()
+    loader.addImage('rabbit', 'static/rabbit.jpg')
+    loader.addJson('persons', 'static/persons.json')
+
+    loader.load(() => {
+      const { resources } = loader
+
+      console.log(resources)
+    })
+  </script>
 </body>
 </html>
